@@ -1,0 +1,64 @@
+<html>
+<head><title>English vocabulary sound kit</title></head>
+<body>
+     
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">ei</span>
+        </div>
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">ei</span>
+        </div>
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">ei</span>
+        </div>
+    </div>
+
+    <audio data-key="65" src="sounds/a.wav"></audio>
+</body>
+
+
+<style>
+    body{
+        background: url(img/music.png);
+        background-size: 100% 100%;
+    }
+
+    .keys {
+        width: 80%;
+        margin: 0 auto;
+        height: auto;
+        min-height: 400px;
+        display: flex;
+        justify-content: center;
+    }
+    .key {
+        width: 80px;
+        border: 3px solid lightgreen;
+        height: 80px;
+        margin: 10px;
+        background: black;
+        border-radius: 10px;
+        justify-content: center;
+        color: white;
+        text-align: center;
+        transition: all 0.07s;
+    }
+    kbd {
+        display: block;
+        vertical-align: middle;
+        font-size: 40px;
+    }
+    .playing {
+        transform: scale(1,1);
+        border: 5px solid yellow;
+        box-shadow: 1px 1px 18px 4px black;
+        color: yellow;
+    }
+</style>
+
+
+</html>
