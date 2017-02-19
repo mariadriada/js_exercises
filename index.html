@@ -7,17 +7,57 @@
             <kbd>A</kbd>
             <span class="sound">ei</span>
         </div>
-        <div data-key="65" class="key">
-            <kbd>A</kbd>
+        <div data-key="66" class="key">
+            <kbd>B</kbd>
             <span class="sound">ei</span>
         </div>
-        <div data-key="65" class="key">
-            <kbd>A</kbd>
+        <div data-key="67" class="key">
+            <kbd>C</kbd>
             <span class="sound">ei</span>
         </div>
     </div>
 
     <audio data-key="65" src="sounds/a.wav"></audio>
+    <audio data-key="66" src="sounds/b.wav"></audio>
+    <audio data-key="67" src="sounds/c.wav"></audio>
+
+   
+    <script>   
+
+        /**
+        * Play the sound in english of the key pressed
+        * @constructor
+        * @param {event} e - Keydown event
+        **/
+        function playSound(e){     
+            const audio = document.querySelector(`audio[data-key=${CSS.escape(e.keyCode)}]`);
+            const key = document.querySelector(`div[data-key=${CSS.escape(e.keyCode)}]`);
+            
+            if (!audio) return; //Stop the function
+
+            audio.currentTime=0; //rewind 
+            
+            key.classList.add('playing');
+            audio.play(); 
+        }
+
+        /**
+        * Remove class style later to transition
+        * @param {event} e - element of transition property
+        **/
+        function removeTransition(e){
+            if (e.propertyName !== 'transform') return;
+            this.classList.remove('playing');
+        }
+
+        
+        const keys = document.querySelectorAll('.key');
+        keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+        window.addEventListener('keydown', playSound);
+
+    </script>
+
 </body>
 
 
@@ -27,36 +67,37 @@
         background-size: 100% 100%;
     }
 
+    kbd {
+            display: block;        
+            font-size: 40px;
+            vertical-align: middle;
+        }
     .keys {
-        width: 80%;
-        margin: 0 auto;
-        height: auto;
-        min-height: 400px;
         display: flex;
+        height: auto;
         justify-content: center;
+        margin: 0 auto;        
+        min-height: 400px;
+        width: 80%;
     }
     .key {
-        width: 80px;
-        border: 3px solid lightgreen;
-        height: 80px;
-        margin: 10px;
         background: black;
-        border-radius: 10px;
-        justify-content: center;
+        border: 3px solid lightgreen;
+        border-radius: 10px; 
         color: white;
+        height: 80px;
+        justify-content: center;
+        margin: 10px;
         text-align: center;
-        transition: all 0.07s;
+        transition: all 0.1s;
+        width: 80px;
     }
-    kbd {
-        display: block;
-        vertical-align: middle;
-        font-size: 40px;
-    }
-    .playing {
-        transform: scale(1,1);
+   
+    .playing {        
         border: 5px solid yellow;
         box-shadow: 1px 1px 18px 4px black;
         color: yellow;
+        transform: scale(1.2);
     }
 </style>
 
