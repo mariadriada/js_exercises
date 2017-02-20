@@ -29,7 +29,7 @@ function removeTransition(e){
 }
 
 window.addEventListener('keydown', playSound);
-window.addEventListener('keyup', removeTransition)
+window.addEventListener('keyup', removeTransition);
 
 
 
