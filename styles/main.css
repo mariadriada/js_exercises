@@ -1,0 +1,39 @@
+
+body{
+    background: url(../img/music.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+kbd {
+        display: block;        
+        font-size: 40px;
+        vertical-align: middle;
+    }
+.keys {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    margin: 0 auto;        
+    min-height: 400px;
+    width: 80%;
+}
+.key {
+    background: black;
+    border: 3px solid lightgreen;
+    border-radius: 10px; 
+    color: white;
+    height: 80px;
+    justify-content: center;
+    margin: 10px;
+    text-align: center;
+    transition: all 0.1s;
+    width: 80px;
+}
+
+.playing {        
+    border: 5px solid yellow;
+    box-shadow: 1px 1px 18px 4px black;
+    color: yellow;
+    transform: scale(1.2);
+}
