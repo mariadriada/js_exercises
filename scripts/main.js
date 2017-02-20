@@ -20,14 +20,14 @@ function playSound(e){
 * Remove class style later to transition
 * @param {event} e - element of transition property
 **/
-function removeTransition(e){
-    if (e.propertyName !== 'transform') return;
-    this.classList.remove('playing');
+function removeTransition(e){   
+    const key = document.querySelector(`div[data-key=${CSS.escape(e.keyCode)}]`);
+
+    if (!key) return;
+
+    key.classList.remove('playing');    
 }
 
-
-const keys = document.querySelectorAll('.key');
-keys.forEach(key => key.addEventListener('transitionend', removeTransition));
-
 window.addEventListener('keydown', playSound);
+window.addEventListener('keyup', removeTransition)
 

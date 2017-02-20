@@ -1,6 +1,6 @@
 
 body{
-    background: url(../img/music.png);
+    background-image: url(../img/music.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -27,7 +27,7 @@ kbd {
     justify-content: center;
     margin: 10px;
     text-align: center;
-    transition: all 0.1s;
+    transition: all 0.5s;
     width: 80px;
 }
 
