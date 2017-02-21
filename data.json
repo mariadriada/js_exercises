@@ -1,0 +1,14 @@
+let keys = [
+    {
+         letter: "A", 
+         pronunciation: "ei",
+         keyCode: "65" 
+    },
+    {
+        letter: "B", 
+        pronunciation: "bi",
+        keyCode: "66"
+    } 
+];
+
+const EXT_SOUND = ".wam"

@@ -32,4 +32,26 @@ window.addEventListener('keydown', playSound);
 window.addEventListener('keyup', removeTransition);
 
 
+/**
+ * To drawsound button in a container (.container_keys)
+ */
+(function drawSoundButtons(){
+
+    let container_keys = '<div class="keys">';
+
+    keys.forEach(function getKeys(element, index, arr){ 
+    
+        container_keys +=   '<div data-key="'+element.keyCode+'" class="key"> \
+                                <kbd>'+element.letter+'</kbd> \
+                                <span class="sound">'+element.pronunciation+'</span> \
+                                <audio data-key="'+element.keyCode+'" src="sounds/a.wav"></audio> \
+                            </div>';    
+    });
+
+    container_keys += "</div>"; //Close .keys
+    document.write(container_keys); // Show sound buttons at main page
+    
+})();
+
+
 
