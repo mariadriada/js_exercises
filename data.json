@@ -1,14 +1,135 @@
+//Properties of sounds buttons
 let keys = [
     {
          letter: "A", 
-         pronunciation: "ei",
+         pronunciation: "éi",
          keyCode: "65" 
     },
     {
         letter: "B", 
         pronunciation: "bi",
         keyCode: "66"
-    } 
+    }
+    ,
+    {
+        letter: "C", 
+        pronunciation: "si",
+        keyCode: "67"
+    } ,
+    {
+        letter: "D", 
+        pronunciation: "di",
+        keyCode: "68"
+    },
+    {
+        letter: "E", 
+        pronunciation: "i",
+        keyCode: "69"
+    },
+    {
+        letter: "F", 
+        pronunciation: "ef",
+        keyCode: "70"
+    },
+    {
+        letter: "G", 
+        pronunciation: "yi",
+        keyCode: "71"
+    },
+    {
+        letter: "H", 
+        pronunciation: "eich",
+        keyCode: "72"
+    },
+    {
+        letter: "I", 
+        pronunciation: "ai",
+        keyCode: "73"
+    },
+    {
+        letter: "J", 
+        pronunciation: "yei",
+        keyCode: "74"
+    },
+    {
+        letter: "K", 
+        pronunciation: "kéy",
+        keyCode: "75"
+    },
+    {
+        letter: "L", 
+        pronunciation: "el",
+        keyCode: "76"
+    },
+    {
+        letter: "M", 
+        pronunciation: "ém",
+        keyCode: "77"
+    },
+    {
+        letter: "N", 
+        pronunciation: "én",
+        keyCode: "78"
+    },
+    {
+        letter: "O", 
+        pronunciation: "ou",
+        keyCode: "79"
+    },
+    {
+        letter: "P", 
+        pronunciation: "pi",
+        keyCode: "80"
+    },
+    {
+        letter: "Q", 
+        pronunciation: "kiú",
+        keyCode: "81"
+    },
+    {
+        letter: "R", 
+        pronunciation: "ar",
+        keyCode: "82"
+    },
+    {
+        letter: "S", 
+        pronunciation: "ess",
+        keyCode: "83"
+    },
+    {
+        letter: "T", 
+        pronunciation: "ti",
+        keyCode: "84"
+    },
+    {
+        letter: "U", 
+        pronunciation: "iu",
+        keyCode: "85"
+    },
+    {
+        letter: "V", 
+        pronunciation: "vi",
+        keyCode: "86"
+    },
+    {
+        letter: "W", 
+        pronunciation: "dobl iu",
+        keyCode: "87"
+    },
+    {
+        letter: "X", 
+        pronunciation: "ex",
+        keyCode: "88"
+    },
+    {
+        letter: "Y", 
+        pronunciation: "uái",
+        keyCode: "89"
+    },
+    {
+        letter: "Z", 
+        pronunciation: "zi",
+        keyCode: "90"
+    }   
 ];
 
-const EXT_SOUND = ".wam"

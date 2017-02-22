@@ -1,7 +1,6 @@
 
 /**
-* Play the sound in english of the key pressed
-* @constructor
+* Play the sound in english of the key pressed 
 * @param {event} e - Keydown event
 **/
 function playSound(e){     
@@ -33,24 +32,31 @@ window.addEventListener('keyup', removeTransition);
 
 
 /**
- * To drawsound button in a container (.container_keys)
+ * To draw sound button in a container (.keys)
+ * @constructor
  */
 (function drawSoundButtons(){
+    const EXT_ = ".wav", PREFIX_ = "sounds/";
+    let container_keys = '<div class="keys">';  
 
-    let container_keys = '<div class="keys">';
-
-    keys.forEach(function getKeys(element, index, arr){ 
+    keys.forEach(function getKeys(key){ 
     
-        container_keys +=   '<div data-key="'+element.keyCode+'" class="key"> \
-                                <kbd>'+element.letter+'</kbd> \
-                                <span class="sound">'+element.pronunciation+'</span> \
-                                <audio data-key="'+element.keyCode+'" src="sounds/a.wav"></audio> \
-                            </div>';    
+        container_keys +=   '<div data-key="'+key.keyCode+'" class="key"> \
+                                <kbd>'+key.letter+'</kbd> \
+                                <span class="sound">'+key.pronunciation+'</span> \
+                                <audio data-key="'+key.keyCode+'" src="'+PREFIX_+key.letter+EXT_+'"></audio> \
+                             </div>';    
     });
 
     container_keys += "</div>"; //Close .keys
-    document.write(container_keys); // Show sound buttons at main page
-    
+    const prepend =     '<h1>English Sound Alphabet</h1>\
+                        <div class="bg_text"></div>\
+                        <div class="text"><p>Please press a letter of the your keyboard for listening its sound in english.</p></div>';
+
+                        console.log(prepend);
+    container_keys = prepend+container_keys;                    
+    //container_keys.insertbefore(prepend, container_keys);
+    document.write(container_keys); // Show sound buttons at main page    
 })();
 
 
