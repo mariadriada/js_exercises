@@ -1,7 +1,11 @@
 
 html {
-    background: url(../images/bg_music.jpg);
+    background: url(../images/bg_music2.jpg);
     background-size: cover;
+}
+h1 {
+    color: white;
+    text-align: center;
 }
 kbd {
     display: block;        
@@ -17,14 +21,14 @@ kbd {
     margin: 0 auto;    
     min-height: 400px;
     position: relative;
-    top: 100px;
+    top: 260px;
     width: 80%;
 }
 .key {
-    background: BLACK;
-    border: 3px solid lightgreen; 
+    background: white;
     border-radius: 10px;
-    color: white;
+    color: #3B0B0B;
+    cursor: pointer;
     height: 80px;
     justify-content: center;
     margin: 10px;
@@ -33,12 +37,13 @@ kbd {
     width: 80px;
 }
 .playing {        
-    border: 5px solid yellow;
-    box-shadow: 1px 1px 18px 4px black;
-    color: yellow;
-    transform: scale(1.2);
+    border: 2px solid #DF013A;
+    box-shadow: 1px 1px 18px 4px white;
+    color: #DF013A;
+    transform: scale(1.1);
 }
 .sound {
+    color: red;
     font-size: 20px;
     letter-spacing: 2px;
 }
@@ -46,22 +51,23 @@ kbd {
     display: block; 
     background-color: red;
     border-radius: 0 50px 0 50px;
-    border: 2px solid black;
-    height: 100px;
+    height: 240px;
     left: 10%;
-    opacity: 0.5;
+    opacity: 0.3;
     position: absolute;
     width: 80%;    
     z-index: 100;   
 }
+.bg_button {
+    width: 120px;
+    height: 120px;
+}
 .text {
     background: transparent;
-    border: 2px solid black;
     border-radius: 0 50px 0 50px;    
     color: white;
     display: block;
     font-size: 32px;
-    font-weight: 900;
     height: 100px;
     left: 10%;
     text-align: center;
@@ -69,3 +75,14 @@ kbd {
     width: 80%;
     z-index: 200;
 }
+.title {
+    width: 100%;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 80px;
+    line-height: 80px;
+    color: black;
+}
+.col-2 {width: 16.66%;}

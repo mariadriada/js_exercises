@@ -1,3 +1,4 @@
+'use strict';
 
 /**
 * Play the sound in english of the key pressed 
@@ -41,17 +42,18 @@ window.addEventListener('keyup', removeTransition);
 
     keys.forEach(function getKeys(key){ 
     
-        container_keys +=   '<div data-key="'+key.keyCode+'" class="key"> \
+        container_keys +=   '<div class="bg_button"><div data-key="'+key.keyCode+'" class="key"> \
                                 <kbd>'+key.letter+'</kbd> \
                                 <span class="sound">'+key.pronunciation+'</span> \
                                 <audio data-key="'+key.keyCode+'" src="'+PREFIX_+key.letter+EXT_+'"></audio> \
-                             </div>';    
+                             </div></div>';    
     });
 
     container_keys += "</div>"; //Close .keys
-    const prepend =     '<h1>English Sound Alphabet</h1>\
+
+    const prepend =    '\
                         <div class="bg_text"></div>\
-                        <div class="text"><p>Please press a letter of the your keyboard for listening its sound in english.</p></div>';
+                        <div class="text"><h1>English Sound Alphabet</h1><p>Please press a letter of the your keyboard for listening its sound in english.</p></div>';
 
                         console.log(prepend);
     container_keys = prepend+container_keys;                    
