@@ -54,11 +54,11 @@ window.addEventListener('keyup', removeTransition);
 
     keys.forEach(function getKeys(key){ 
     
-        container_keys +=   '<div class="bg_button"><div data-key="'+key.keyCode+'" class="key"> \
-                                <kbd>'+key.letter+'</kbd> \
-                                <span class="sound">'+key.pronunciation+'</span> \
-                                <audio data-key="'+key.keyCode+'" src="'+PREFIX_+key.letter+EXT_+'"></audio> \
-                             </div></div>';    
+        container_keys +=   `<div class="bg_button"><div data-key="${key.keyCode}" class="key"> \
+                                <kbd>${key.letter}</kbd> \
+                                <span class="sound">${key.pronunciation}</span> \
+                                <audio data-key="${key.keyCode}" src="${PREFIX_}${key.letter+EXT_}"></audio> \
+                             </div></div>`;     
     });
 
     container_keys += "</div>"; //Close .keys
@@ -77,9 +77,8 @@ window.addEventListener('keyup', removeTransition);
                         <div class="speed_control slow_speed" speed="0.5">-</div> \
                     </div>';
 
-    container_keys = prepend+container_keys+ append;                   
-    //container_keys.insertbefore(prepend, container_keys);
-    document.write(container_keys); // Show sound buttons at main page    
+    container_keys = `${prepend}${container_keys}${append}`;  
+    document.body.innerHTML = container_keys; // Show sound buttons at main page    
 })();
 
 
