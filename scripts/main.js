@@ -81,5 +81,22 @@ window.addEventListener('keyup', removeTransition);
     document.body.innerHTML = container_keys; // Show sound buttons at main page    
 })();
 
+// Get the speed controls
+let speed = document.querySelectorAll(".speed_control ");
+// Click to speed control 
+speed.forEach(function(element){ 
+    element.addEventListener('click', function(even){ changeSpeedAudio(element.getAttribute('speed')) });
+});
 
 
+/**
+ * Change the speed sound reproduction
+ * @param = { } speed - speed ratio to set
+ */
+function changeSpeedAudio(speed){
+    const audio = document.querySelectorAll('audio');
+    
+    audio.forEach(function(audio, index, array){
+        array[index].playbackRate = speed;
+    });
+}
