@@ -14,8 +14,26 @@ function playSound(e){
 
     audio.currentTime=0; //rewind 
     
-    key.classList.add('playing');
+    addClass(key, 'playing');
     audio.play(); 
+}
+
+/**
+ * Add a class to a element
+ * @param {element} - element to class change
+ * @param {class_element} - Class to assing to the element
+ */
+function addClass(element, class_element){
+    element.classList.add(class_element);
+}
+
+/**
+ * Remove a class to a element
+ * @param {element} - element to class change
+ * @param {class_element} - Class to remove to the element
+ */
+function removeClass(element, class_element){
+    element.classList.remove(class_element);
 }
 
 /**
@@ -27,7 +45,7 @@ function removeTransition(e){
 
     if (!key) return;
 
-    key.classList.remove('playing');    
+    removeClass(key, 'playing');    
 }
 
 /**
@@ -80,6 +98,13 @@ window.addEventListener('keyup', removeTransition);
     container_keys = `${prepend}${container_keys}${append}`;  
     document.body.innerHTML = container_keys; // Show sound buttons at main page    
 })();
+
+/**
+ * Render the page with main content
+ */
+function renderPage(){
+
+}
 
 // Get the speed controls
 let speed = document.querySelectorAll(".speed_control ");
