@@ -6,6 +6,11 @@
  * @param {class_element} - Class to assing to the element
  */
 function addClass(element, class_element){
+    //Disable effect in case it's a sound control
+    if (element.classList.contains('speed_control')){
+      let speed_controls = document.querySelectorAll('.speed_control')
+      speed_controls.forEach(function(element){ element.classList.remove(class_element); });
+    }
     element.classList.add(class_element);
 }
 
@@ -13,12 +18,15 @@ function addClass(element, class_element){
  * Change the speed sound reproduction to selected
  * @param = { } speed - speed ratio to set
  */
-function changeSpeedAudio(speed){
+function changeSpeedAudio(speed_control){
     const audio = document.querySelectorAll('audio');
     
     audio.forEach(function(audio, index, array){
-        array[index].playbackRate = speed;
+        array[index].playbackRate = speed_control.getAttribute('speed');
     });
+
+    // Valid class efect
+    (speed_control.classList.contains('selected_speed')) ? removeClass(speed_control, 'selected_speed') :  addClass(speed_control, 'selected_speed');
 }
 
 
@@ -111,7 +119,8 @@ function removeTransition(e){
     let speed = document.querySelectorAll(".speed_control ");
     // Click to speed control 
     speed.forEach(function(element){ 
-        element.addEventListener('click', function(even){ changeSpeedAudio(element.getAttribute('speed')) });
+       // element.addEventListener('click', function(even){ changeSpeedAudio(element.getAttribute('speed')) });
+        element.addEventListener('click', function(even){ changeSpeedAudio(element) });
     });
 
     window.addEventListener('keydown', playSound);
