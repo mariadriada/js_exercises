@@ -1,5 +1,5 @@
 //Properties of sounds buttons
-let keys = [
+const keys = [
     {
          letter: "A", 
          pronunciation: "éi",
