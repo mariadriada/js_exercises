@@ -42,7 +42,7 @@ function drawSoundButtons(){
                             <div class="velocity_control"> 
                                 <div class="title_speed_control">Speed control</div>
                                 <div class="speed_control fast_speed" speed="2">+</div> 
-                                <div class="speed_control normal_speed"  speed="1"></div> 
+                                <div class="speed_control normal_speed  selected_speed "  speed="1"></div> 
                                 <div class="speed_control slow_speed" speed="0.5">-</div> 
                             </div> 
                         <div class="keys">`;  
@@ -52,7 +52,7 @@ function drawSoundButtons(){
                                 <kbd>${key.letter}</kbd> \
                                 <span class="sound">${key.pronunciation}</span> \
                                 <audio data-key="${key.keyCode}" src="${PREFIX_}${key.letter+EXT_}"></audio> \
-                             </div></div>`;     
+                             </div></div>`;           
     });
 
     container_keys += `</div></div>`; 
