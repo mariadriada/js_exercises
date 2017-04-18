@@ -1,4 +1,4 @@
-//Properties of sounds buttons
+//Properties of sounds buttons vector
 const keys = [
     {
          letter: "A", 
