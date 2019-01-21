@@ -51,7 +51,7 @@ function drawSoundButtons(){
         container_keys +=   `<div class="bg_button"><div data-key="${key.keyCode}" class="key"> \
                                 <kbd>${key.letter}</kbd> \
                                 <span class="sound">${key.pronunciation}</span> \
-                                <audio data-key="${key.keyCode}" src="${PREFIX_}${key.letter+EXT_}"></audio> \
+                                <audio data-key="${key.keyCode}" src="${PREFIX_}${key.letter.toLowerCase()+EXT_}"></audio> \
                              </div></div>`;           
     });
 
